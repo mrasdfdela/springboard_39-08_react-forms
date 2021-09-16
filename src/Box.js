@@ -1,8 +1,10 @@
 import React from "react";
+import "./Box.css";
 
 function Box({boxWidth, boxHeight, boxColor}) {
   return (
     <div
+      className="Box"
       style={
         {
           width: boxWidth,

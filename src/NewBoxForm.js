@@ -1,49 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 
-function NewBoxForm() {
-  const INITAL_STATE = {
-    "form-height": "50px",
-    "form-width": "50px",
-    "form-color": "black",
-  }
-  const handleChange = (e)=> { 
-    console.log(INITAL_STATE)
-  }
-  const handleSubmit = (e)=> { 
+function NewBoxForm({ addBox }) {
+  const INITIAL_STATE = {
+    "width": "",
+    "height": "",
+    "color": "",
+  };
+  const [ formData, setFormData ] = useState(INITIAL_STATE);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData( fData => ({
+      ...fData, 
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(INITAL_STATE)
-  }
+    addBox(formData);
+    setFormData(INITIAL_STATE);
+  };
+
   return (
-    <form onSubmit={ handleSubmit }>
+    <form onSubmit={handleSubmit}>
       <label htmlFor="form-height" />
-      <input 
+      <input
         id="form-height"
-        type = "text"
-        placeholder="height"
-        value="50px"
-        onChange= { handleChange }
+        type="text"
+        placeholder="Box Height"
+        name="height"
+        value={ formData.height }
+        onChange={handleChange}
       />
 
-      <label htmlFor="form-weight" />
-      <input 
-        id="form-weight"
-        type = "text"
-        placeholder="weight"
-        value="50px"
-        onChange= { handleChange }
+      <label htmlFor="form-width" />
+      <input
+        id="form-width"
+        type="text"
+        placeholder="Box Width"
+        name="width"
+        value={ formData.width }
+        onChange={handleChange}
       />
 
       <label htmlFor="form-color" />
-      <input 
+      <input
         id="form-height"
-        type = "text"
-        placeholder="color"
-        value="color"
-        onChange= { handleChange }
+        type="text"
+        placeholder="Box Color"
+        name="color"
+        value={ formData.color }
+        onChange={handleChange}
       />
       <button>Create new box</button>
     </form>
-  )
+  );
 }
 
 export default NewBoxForm;
