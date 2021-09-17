@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <p>
+      React Forms Exercise
+    </p>
+    <div
+      class="Box"
+    >
+      <div
+        style="width: 20px; height: 20px; background-color: green;"
+      />
+      <button>
+        X
+      </button>
+    </div>
+    <form>
+      <label
+        for="form_height"
+      >
+        Height
+      </label>
+      <input
+        id="form_height"
+        name="height"
+        placeholder="Box Height"
+        type="text"
+        value=""
+      />
+      <label
+        for="form_width"
+      >
+        Width
+      </label>
+      <input
+        id="form_width"
+        name="width"
+        placeholder="Box Width"
+        type="text"
+        value=""
+      />
+      <label
+        for="form_color"
+      >
+        Color
+      </label>
+      <input
+        id="form_color"
+        name="color"
+        placeholder="Box Color"
+        type="text"
+        value=""
+      />
+      <button>
+        Create new box
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

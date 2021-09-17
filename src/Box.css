@@ -1,3 +1,9 @@
 .Box {
-  margin: 5px
+  margin: 5px;
+  display: flex
+}
+
+.Box > div, button {
+  margin: 2px;
+  align-self: center
 }

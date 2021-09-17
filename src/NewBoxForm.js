@@ -24,33 +24,33 @@ function NewBoxForm({ addBox }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="form-height" />
+      <label htmlFor="form_height">Height</label>
       <input
-        id="form-height"
+        id="form_height"
         type="text"
         placeholder="Box Height"
         name="height"
-        value={ formData.height }
+        value={formData.height}
         onChange={handleChange}
       />
 
-      <label htmlFor="form-width" />
+      <label htmlFor="form_width">Width</label>
       <input
-        id="form-width"
+        id="form_width"
         type="text"
         placeholder="Box Width"
         name="width"
-        value={ formData.width }
+        value={formData.width}
         onChange={handleChange}
       />
 
-      <label htmlFor="form-color" />
+      <label htmlFor="form_color">Color</label>
       <input
-        id="form-height"
+        id="form_color"
         type="text"
         placeholder="Box Color"
         name="color"
-        value={ formData.color }
+        value={formData.color}
         onChange={handleChange}
       />
       <button>Create new box</button>
