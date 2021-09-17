@@ -7,9 +7,7 @@ import NewTodoForm from './NewTodoForm';
 import './TodoList.css';
 
 function TodoList() {
-  const [ todos, setTodos ] = useState([
-    {'task':'take out trash', id: uuid()}
-  ]);
+  const [ todos, setTodos ] = useState([]);
 
   const addTodo = (newTodo) =>{
     setTodos( todos => [ ...todos, {...newTodo, id:uuid() }] );
